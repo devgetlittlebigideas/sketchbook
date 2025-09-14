@@ -5,7 +5,7 @@ A lightweight React + Tailwind component library for little big ideas.
 ## Installation
 
 ```bash
-npm install @devgetlittlebigideas/sketchbook
+npm install @littlebigideas/sketchbook
 ```
 
 ## Usage
@@ -13,8 +13,8 @@ npm install @devgetlittlebigideas/sketchbook
 Import the components and styles in your app:
 
 ```jsx
-import { Button, Card, Input } from '@devgetlittlebigideas/sketchbook'
-import '@devgetlittlebigideas/sketchbook/styles'
+import { Button, Card, Input } from '@littlebigideas/sketchbook'
+import '@littlebigideas/sketchbook/styles'
 
 function App() {
   return (

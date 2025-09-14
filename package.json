@@ -1,5 +1,5 @@
 {
-  "name": "@devgetlittlebigideas/sketchbook",
+  "name": "@littlebigideas/sketchbook",
   "version": "0.0.3",
   "description": "A lightweight React + Tailwind component library",
   "type": "module",
