@@ -78,6 +78,7 @@ npm run build-storybook
 
 ## Components
 
+- **Badge** - A status indicator component with multiple variants and sizes
 - **Button** - A versatile button component with multiple variants and sizes
 - **Card** - A container component with header and content sections
 - **Input** - A form input component with label, error, and helper text support
