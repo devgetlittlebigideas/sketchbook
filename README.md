@@ -15,7 +15,7 @@ This package is published to GitHub Packages as a private package.
 
 2. Authenticate to GitHub Packages:
 ```bash
-npm login --scope=@littlebigideas --registry=https://npm.pkg.github.com
+npm login --scope=@devgetlittlebigideas --registry=https://npm.pkg.github.com
 # Username: YOUR_GITHUB_USERNAME
 # Password: YOUR_GITHUB_TOKEN
 # Email: YOUR_EMAIL
@@ -23,14 +23,14 @@ npm login --scope=@littlebigideas --registry=https://npm.pkg.github.com
 
 3. Install the package:
 ```bash
-npm install @littlebigideas/sketchbook
+npm install @devgetlittlebigideas/sketchbook
 ```
 
 ### For CI/CD environments:
 
 Create a `.npmrc` file in your project:
 ```
-@littlebigideas:registry=https://npm.pkg.github.com
+@devgetlittlebigideas:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
 ```
 
@@ -41,8 +41,8 @@ Then set `NODE_AUTH_TOKEN` environment variable with your GitHub token.
 Import the components and styles in your app:
 
 ```jsx
-import { Button, Card, Input } from '@littlebigideas/sketchbook'
-import '@littlebigideas/sketchbook/styles'
+import { Button, Card, Input } from '@devgetlittlebigideas/sketchbook'
+import '@devgetlittlebigideas/sketchbook/styles'
 
 function App() {
   return (
@@ -94,7 +94,7 @@ The package is automatically published to GitHub Packages when a new release is 
 
 1. First authenticate to GitHub Packages:
 ```bash
-npm login --scope=@littlebigideas --registry=https://npm.pkg.github.com
+npm login --scope=@devgetlittlebigideas --registry=https://npm.pkg.github.com
 ```
 
 2. Build and publish:
