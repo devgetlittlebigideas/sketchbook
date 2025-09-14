@@ -4,37 +4,9 @@ A lightweight React + Tailwind component library for little big ideas.
 
 ## Installation
 
-This package is published to GitHub Packages as a private package.
-
-### First-time setup (once per machine):
-
-1. Create a GitHub Personal Access Token:
-   - Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)
-   - Generate new token with `read:packages` scope
-   - Save the token securely
-
-2. Authenticate to GitHub Packages:
-```bash
-npm login --scope=@devgetlittlebigideas --registry=https://npm.pkg.github.com
-# Username: YOUR_GITHUB_USERNAME
-# Password: YOUR_GITHUB_TOKEN
-# Email: YOUR_EMAIL
-```
-
-3. Install the package:
 ```bash
 npm install @devgetlittlebigideas/sketchbook
 ```
-
-### For CI/CD environments:
-
-Create a `.npmrc` file in your project:
-```
-@devgetlittlebigideas:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
-```
-
-Then set `NODE_AUTH_TOKEN` environment variable with your GitHub token.
 
 ## Usage
 
@@ -91,7 +63,7 @@ View the component documentation and playground at [GitHub Pages](https://devget
 
 ### Automated Release Process (Recommended)
 
-The package is automatically published to GitHub Packages when you create a GitHub release.
+The package is automatically published to npm when you create a GitHub release.
 
 **Steps:**
 1. Update version in package.json:
@@ -109,27 +81,35 @@ The package is automatically published to GitHub Packages when you create a GitH
 3. Create a GitHub release (this triggers auto-publish):
    ```bash
    # Using GitHub CLI
-   gh release create v0.0.2 --title "Version 0.0.2" --notes "Description of changes"
+   gh release create v0.0.3 --title "Version 0.0.3" --notes "Description of changes"
 
    # Or via GitHub UI: Go to Releases → "Create a new release"
    ```
 
-4. The GitHub Action will automatically build and publish to GitHub Packages!
+4. The GitHub Action will automatically build and publish to npm!
 
 ### Manual Publishing
 
 If you need to publish manually:
 
-1. First authenticate to GitHub Packages:
+1. First authenticate to npm:
    ```bash
-   npm login --scope=@devgetlittlebigideas --registry=https://npm.pkg.github.com
+   npm login
    ```
 
 2. Update version, build and publish:
    ```bash
    npm version patch  # Update version
-   npm publish        # Build happens automatically via prepublishOnly
+   npm publish --access public
    ```
+
+### NPM Token Setup
+
+For automated publishing, you need to add your npm token as a GitHub secret:
+
+1. Create an npm access token at [npmjs.com](https://www.npmjs.com/settings/tokens)
+2. In your GitHub repository, go to Settings → Secrets and variables → Actions
+3. Add a new secret named `NPM_TOKEN` with your npm token as the value
 
 ## GitHub Pages Setup (Already Configured)
 
