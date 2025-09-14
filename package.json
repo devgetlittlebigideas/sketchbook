@@ -1,6 +1,6 @@
 {
   "name": "@devgetlittlebigideas/sketchbook",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A lightweight React + Tailwind component library",
   "type": "module",
   "main": "./dist/index.cjs",
