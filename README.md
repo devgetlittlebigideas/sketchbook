@@ -4,9 +4,37 @@ A lightweight React + Tailwind component library for little big ideas.
 
 ## Installation
 
+This package is published to GitHub Packages as a private package.
+
+### First-time setup (once per machine):
+
+1. Create a GitHub Personal Access Token:
+   - Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)
+   - Generate new token with `read:packages` scope
+   - Save the token securely
+
+2. Authenticate to GitHub Packages:
+```bash
+npm login --scope=@littlebigideas --registry=https://npm.pkg.github.com
+# Username: YOUR_GITHUB_USERNAME
+# Password: YOUR_GITHUB_TOKEN
+# Email: YOUR_EMAIL
+```
+
+3. Install the package:
 ```bash
 npm install @littlebigideas/sketchbook
 ```
+
+### For CI/CD environments:
+
+Create a `.npmrc` file in your project:
+```
+@littlebigideas:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+```
+
+Then set `NODE_AUTH_TOKEN` environment variable with your GitHub token.
 
 ## Usage
 
@@ -60,26 +88,25 @@ View the component documentation and playground at [GitHub Pages](https://devget
 
 ## Publishing
 
-The package is automatically published to npm when a new release is created on GitHub.
+The package is automatically published to GitHub Packages when a new release is created on GitHub.
 
 ### Manual publishing
+
+1. First authenticate to GitHub Packages:
 ```bash
-npm run build
-npm publish --access public
+npm login --scope=@littlebigideas --registry=https://npm.pkg.github.com
 ```
 
-## Setup for GitHub Pages
+2. Build and publish:
+```bash
+npm run build
+npm publish
+```
 
-1. Go to your repository settings on GitHub
-2. Navigate to Pages section
-3. Under "Build and deployment", select "GitHub Actions" as the source
-4. The Storybook will automatically deploy when you push to main
+## GitHub Pages Setup (Already Configured)
 
-## NPM Token Setup
-
-To enable automatic publishing:
-1. Create an npm access token at npmjs.com
-2. Add it as `NPM_TOKEN` in your GitHub repository secrets
+The Storybook is automatically deployed to GitHub Pages when you push to main.
+View it at: https://devgetlittlebigideas.github.io/sketchbook/
 
 ## License
 

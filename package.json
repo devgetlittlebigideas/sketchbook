@@ -41,6 +41,9 @@
     "url": "https://github.com/devgetlittlebigideas/sketchbook/issues"
   },
   "homepage": "https://github.com/devgetlittlebigideas/sketchbook#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "peerDependencies": {
     "react": ">=17.0.0",
     "react-dom": ">=17.0.0"
