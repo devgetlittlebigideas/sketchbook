@@ -86,22 +86,49 @@ npm run build-storybook
 
 View the component documentation and playground at [GitHub Pages](https://devgetlittlebigideas.github.io/sketchbook/) (after deployment).
 
-## Publishing
+## Publishing & Releases
 
-The package is automatically published to GitHub Packages when a new release is created on GitHub.
+### Automated Release Process (Recommended)
 
-### Manual publishing
+The package is automatically published to GitHub Packages when you create a GitHub release.
+
+**Steps:**
+1. Update version in package.json:
+   ```bash
+   npm version patch  # For bug fixes (0.0.1 → 0.0.2)
+   npm version minor  # For new features (0.0.2 → 0.1.0)
+   npm version major  # For breaking changes (0.1.0 → 1.0.0)
+   ```
+
+2. Push changes with tags:
+   ```bash
+   git push origin main --tags
+   ```
+
+3. Create a GitHub release (this triggers auto-publish):
+   ```bash
+   # Using GitHub CLI
+   gh release create v0.0.2 --title "Version 0.0.2" --notes "Description of changes"
+
+   # Or via GitHub UI: Go to Releases → "Create a new release"
+   ```
+
+4. The GitHub Action will automatically build and publish to GitHub Packages!
+
+### Manual Publishing
+
+If you need to publish manually:
 
 1. First authenticate to GitHub Packages:
-```bash
-npm login --scope=@devgetlittlebigideas --registry=https://npm.pkg.github.com
-```
+   ```bash
+   npm login --scope=@devgetlittlebigideas --registry=https://npm.pkg.github.com
+   ```
 
-2. Build and publish:
-```bash
-npm run build
-npm publish
-```
+2. Update version, build and publish:
+   ```bash
+   npm version patch  # Update version
+   npm publish        # Build happens automatically via prepublishOnly
+   ```
 
 ## GitHub Pages Setup (Already Configured)
 
