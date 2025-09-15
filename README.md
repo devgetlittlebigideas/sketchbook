@@ -57,7 +57,7 @@ npm run build-storybook
 
 ## Storybook
 
-View the component documentation and playground at [GitHub Pages](https://devgetlittlebigideas.github.io/sketchbook/) (after deployment).
+View the component documentation and playground at [GitHub Pages](https://getlittlebigideas.github.io/sketchbook/).
 
 ## Publishing & Releases
 
@@ -114,7 +114,7 @@ For automated publishing, you need to add your npm token as a GitHub secret:
 ## GitHub Pages Setup (Already Configured)
 
 The Storybook is automatically deployed to GitHub Pages when you push to main.
-View it at: https://devgetlittlebigideas.github.io/sketchbook/
+View it at: https://getlittlebigideas.github.io/sketchbook/
 
 ## License
 

@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devgetlittlebigideas/sketchbook.git"
+    "url": "git+https://github.com/getlittlebigideas/sketchbook.git"
   },
   "keywords": [
     "react",
@@ -38,9 +38,9 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/devgetlittlebigideas/sketchbook/issues"
+    "url": "https://github.com/getlittlebigideas/sketchbook/issues"
   },
-  "homepage": "https://github.com/devgetlittlebigideas/sketchbook#readme",
+  "homepage": "https://github.com/getlittlebigideas/sketchbook#readme",
   "peerDependencies": {
     "react": ">=17.0.0",
     "react-dom": ">=17.0.0"
