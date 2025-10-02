@@ -14,3 +14,6 @@ export type { InputProps } from './components/Input'
 
 export { Spinner } from './components/Spinner'
 export type { SpinnerProps } from './components/Spinner'
+
+export { Modal, ModalHeader, ModalBody, ModalFooter } from './components/Modal'
+export type { ModalProps, ModalHeaderProps, ModalBodyProps, ModalFooterProps } from './components/Modal'
