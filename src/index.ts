@@ -11,3 +11,6 @@ export type { CardProps, CardHeaderProps, CardTitleProps, CardContentProps } fro
 
 export { Input } from './components/Input'
 export type { InputProps } from './components/Input'
+
+export { Spinner } from './components/Spinner'
+export type { SpinnerProps } from './components/Spinner'
