@@ -17,3 +17,6 @@ export type { SpinnerProps } from './components/Spinner'
 
 export { Modal, ModalHeader, ModalBody, ModalFooter } from './components/Modal'
 export type { ModalProps, ModalHeaderProps, ModalBodyProps, ModalFooterProps } from './components/Modal'
+
+export { ToastProvider, useToast } from './components/Toast'
+export type { ToastProps, ToastProviderProps, UseToastReturn } from './components/Toast'
