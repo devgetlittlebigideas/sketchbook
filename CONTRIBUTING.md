@@ -14,20 +14,24 @@ You don't need to be an expert coder - we'll walk you through each step!
 ## Overview: The Component Creation Workflow
 
 ```
-1. Design in Figma
+1. Create a new branch (main is protected!)
    ↓
-2. Export code with FigmaToCode plugin
+2. Design in Figma
    ↓
-3. Refine code with AI assistance (Claude, ChatGPT, etc.)
+3. Export code with FigmaToCode plugin
    ↓
-4. Use scaffold script to set up files
+4. Refine code with AI assistance (Claude, ChatGPT, etc.)
    ↓
-5. Test in Storybook
+5. Use scaffold script to set up files
    ↓
-6. Create Pull Request
+6. Test in Storybook
    ↓
-7. Developer reviews and merges
+7. Create Pull Request for review
+   ↓
+8. Developer reviews and merges
 ```
+
+**Note:** The `main` branch is protected. All contributions must be made through pull requests from a feature branch.
 
 ---
 
@@ -45,6 +49,28 @@ Before you start, make sure you have:
 ---
 
 ## Step-by-Step Guide
+
+### Step 0: Create Your Feature Branch
+
+Before you start, create a new branch for your component:
+
+```bash
+# Make sure you're on main and up to date
+git checkout main
+git pull origin main
+
+# Create a new branch
+git checkout -b add-your-component-name
+```
+
+**Branch naming examples:**
+- `add-tooltip`
+- `add-dropdown-menu`
+- `add-progress-bar`
+
+Now you're ready to start working!
+
+---
 
 ### Step 1: Design Your Component in Figma
 
@@ -166,10 +192,17 @@ Fix any TypeScript errors that appear. If you get stuck, ask AI or a developer f
 
 ### Step 7: Create a Pull Request
 
+**Important:** The `main` branch is protected - all changes must go through pull requests. You cannot push directly to main.
+
 1. **Create a new branch:**
    ```bash
    git checkout -b add-your-component-name
    ```
+
+   Choose a descriptive name like:
+   - `add-tooltip-component`
+   - `add-dropdown-menu`
+   - `add-progress-bar`
 
 2. **Commit your changes:**
    ```bash
@@ -183,6 +216,14 @@ Fix any TypeScript errors that appear. If you get stuck, ask AI or a developer f
    ```
 
 4. **Create PR on GitHub:**
+
+   **Option A - Using GitHub CLI (easiest):**
+   ```bash
+   gh pr create --title "Add YourComponent" --fill
+   ```
+   This will automatically use the PR template!
+
+   **Option B - Using GitHub website:**
    - Go to the repository on GitHub
    - Click "Pull requests" → "New pull request"
    - Select your branch
